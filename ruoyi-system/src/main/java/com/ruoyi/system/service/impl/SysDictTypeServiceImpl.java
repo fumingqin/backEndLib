@@ -32,7 +32,7 @@ public class SysDictTypeServiceImpl implements ISysDictTypeService
     /**
      * 项目启动时，初始化字典到缓存
      */
-    @PostConstruct
+    /*@PostConstruct
     public void init()
     {
         List<SysDictType> dictTypeList = dictTypeMapper.selectDictTypeAll();
@@ -41,7 +41,7 @@ public class SysDictTypeServiceImpl implements ISysDictTypeService
             List<SysDictData> dictDatas = dictDataMapper.selectDictDataByType(dictType.getDictType());
             DictUtils.setDictCache(dictType.getDictType(), dictDatas);
         }
-    }
+    }*/
 
     /**
      * 根据条件分页查询字典类型

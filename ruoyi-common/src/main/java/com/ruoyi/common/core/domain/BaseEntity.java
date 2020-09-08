@@ -68,6 +68,7 @@ public class BaseEntity implements Serializable {
      * 创建者
      */
     @TableField(value = "create_by", fill = FieldFill.INSERT)
+    @ApiModelProperty(value = "创建人")
     protected String createBy;
 
     /**
@@ -112,6 +113,12 @@ public class BaseEntity implements Serializable {
      */
     @TableField(exist = false)
     private Map<String, Object> params;
+
+    /**
+     * 备注
+     */
+    @TableField(exist = false)
+    private String remark;
 
     public Map<String, Object> getParams() {
         if (params == null) {

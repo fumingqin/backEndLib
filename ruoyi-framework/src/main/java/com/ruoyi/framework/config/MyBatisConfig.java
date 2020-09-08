@@ -30,12 +30,12 @@ import org.springframework.util.ClassUtils;
 @Configuration
 public class MyBatisConfig
 {
-    @Autowired
-    private Environment env;
+//    @Autowired
+//    private Environment env;
 
-    static final String DEFAULT_RESOURCE_PATTERN = "**/*.class";
+//    static final String DEFAULT_RESOURCE_PATTERN = "**/*.class";
 
-    public static String setTypeAliasesPackage(String typeAliasesPackage)
+    /*public static String setTypeAliasesPackage(String typeAliasesPackage)
     {
         ResourcePatternResolver resolver = (ResourcePatternResolver) new PathMatchingResourcePatternResolver();
         MetadataReaderFactory metadataReaderFactory = new CachingMetadataReaderFactory(resolver);
@@ -87,9 +87,9 @@ public class MyBatisConfig
             e.printStackTrace();
         }
         return typeAliasesPackage;
-    }
+    }*/
 
-    @Bean
+    /*@Bean
     public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception
     {
         String typeAliasesPackage = env.getProperty("mybatis.typeAliasesPackage");
@@ -104,5 +104,5 @@ public class MyBatisConfig
         sessionFactory.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(mapperLocations));
         sessionFactory.setConfigLocation(new DefaultResourceLoader().getResource(configLocation));
         return sessionFactory.getObject();
-    }
+    }*/
 }

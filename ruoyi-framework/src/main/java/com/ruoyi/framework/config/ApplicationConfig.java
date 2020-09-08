@@ -48,7 +48,7 @@ public class ApplicationConfig
      *
      * @return
      */
-    @Bean
+    /*@Bean
     public CorsFilter corsFilter() {
         final UrlBasedCorsConfigurationSource urlBasedCorsConfigurationSource = new UrlBasedCorsConfigurationSource();
         final CorsConfiguration corsConfiguration = new CorsConfiguration();
@@ -58,5 +58,5 @@ public class ApplicationConfig
         corsConfiguration.addAllowedMethod("*");
         urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", corsConfiguration);
         return new CorsFilter(urlBasedCorsConfigurationSource);
-    }
+    }*/
 }

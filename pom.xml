@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.gy</groupId>
+    <groupId>com.ruoyi</groupId>
     <artifactId>default-app</artifactId>
     <version>3.1.0</version>
 
@@ -152,36 +152,41 @@
             <!--子模块 start -->
             <!-- 定时任务-->
             <dependency>
-                <groupId>com.gy</groupId>
+                <groupId>com.ruoyi</groupId>
                 <artifactId>ruoyi-quartz</artifactId>
                 <version>${ruoyi.version}</version>
             </dependency>
 
             <!-- 代码生成-->
             <dependency>
-                <groupId>com.gy</groupId>
+                <groupId>com.ruoyi</groupId>
                 <artifactId>ruoyi-generator</artifactId>
                 <version>${ruoyi.version}</version>
             </dependency>
 
             <!-- 核心模块-->
             <dependency>
-                <groupId>com.gy</groupId>
+                <groupId>com.ruoyi</groupId>
                 <artifactId>ruoyi-framework</artifactId>
                 <version>${ruoyi.version}</version>
             </dependency>
 
             <!-- 系统模块-->
             <dependency>
-                <groupId>com.gy</groupId>
+                <groupId>com.ruoyi</groupId>
                 <artifactId>ruoyi-system</artifactId>
                 <version>${ruoyi.version}</version>
             </dependency>
 
             <!-- 通用工具-->
             <dependency>
-                <groupId>com.gy</groupId>
+                <groupId>com.ruoyi</groupId>
                 <artifactId>ruoyi-common</artifactId>
+                <version>${ruoyi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.ruoyi</groupId>
+                <artifactId>one-module</artifactId>
                 <version>${ruoyi.version}</version>
             </dependency>
             <!--子模块 end -->
@@ -237,6 +242,7 @@
         <module>ruoyi-quartz</module>
         <module>ruoyi-generator</module>
         <module>ruoyi-common</module>
+        <module>one-module</module>
     </modules>
     <packaging>pom</packaging>
 

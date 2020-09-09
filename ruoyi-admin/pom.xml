@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>default-app</artifactId>
-        <groupId>com.gy</groupId>
+        <groupId>com.ruoyi</groupId>
         <version>3.1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -57,20 +57,46 @@
 
         <!-- 核心模块-->
         <dependency>
-            <groupId>com.gy</groupId>
+            <groupId>com.ruoyi</groupId>
             <artifactId>ruoyi-framework</artifactId>
         </dependency>
 
         <!-- 定时任务-->
         <dependency>
-            <groupId>com.gy</groupId>
+            <groupId>com.ruoyi</groupId>
             <artifactId>ruoyi-quartz</artifactId>
+        </dependency>
+
+        <!-- one-module-->
+        <dependency>
+            <groupId>com.ruoyi</groupId>
+            <artifactId>one-module</artifactId>
         </dependency>
 
         <!-- 代码生成-->
         <dependency>
-            <groupId>com.gy</groupId>
+            <groupId>com.ruoyi</groupId>
             <artifactId>ruoyi-generator</artifactId>
+        </dependency>
+
+        <!-- mybatis-plus-boot-starter -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis.plus.version}</version>
+        </dependency>
+
+        <!-- mybatis plus extension,包含了mybatis plus core -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
+            <version>${mybatis.plus.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.jsqlparser</groupId>
+            <artifactId>jsqlparser</artifactId>
+            <version>1.4</version>
         </dependency>
 
     </dependencies>

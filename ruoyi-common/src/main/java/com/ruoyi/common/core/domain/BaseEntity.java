@@ -126,4 +126,10 @@ public class BaseEntity implements Serializable {
         }
         return params;
     }
+
+    /**
+     * 删除标志
+     */
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private String delFlag;
 }

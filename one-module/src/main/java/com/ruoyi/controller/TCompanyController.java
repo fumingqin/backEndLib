@@ -54,7 +54,7 @@ public class TCompanyController extends BaseController {
         List<TCompany> list = tCompanyService.list(Wrappers.query(tCompany));
         return getDataTable(list);
     }
-    
+
     /**
      * 导出公司列表
      */

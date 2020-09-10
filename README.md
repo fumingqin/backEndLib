@@ -8,6 +8,10 @@ date: 2020-9-2 09:34:45
 
 高效率开发，使用代码生成器可以一键生成前后端代码
 
+## 接口文档
+
+[http://ip:port/swagger-ui.html](http://ip:port/swagger-ui.html)
+
 ## 模块组成
 
 1、**`ruoyi-admin`** 后台服务模块，后台控制的Controller在这里

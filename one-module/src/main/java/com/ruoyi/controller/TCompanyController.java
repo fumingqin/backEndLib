@@ -6,6 +6,8 @@ import java.util.List;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.ruoyi.domain.TCompany;
 import com.ruoyi.mapper.TCompanyMapper;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,6 +33,7 @@ import com.ruoyi.common.core.page.TableDataInfo;
  * @author ruoyi
  * @date 2020-09-09
  */
+@Api(tags = "测试_公司信息管理")
 @RestController
 @RequestMapping("/system/company")
 public class TCompanyController extends BaseController {
@@ -43,6 +46,7 @@ public class TCompanyController extends BaseController {
     /**
      * 查询公司列表
      */
+    @ApiOperation("获取公司列表")
     @PreAuthorize("@ss.hasPermi('system:company:list')")
     @GetMapping("/list")
     public TableDataInfo list(TCompany tCompany) {
@@ -54,6 +58,7 @@ public class TCompanyController extends BaseController {
     /**
      * 导出公司列表
      */
+    @ApiOperation("导出公司列表")
     @PreAuthorize("@ss.hasPermi('system:company:export')")
     @Log(title = "公司", businessType = BusinessType.EXPORT)
     @GetMapping("/export")
@@ -66,6 +71,7 @@ public class TCompanyController extends BaseController {
     /**
      * 获取公司详细信息
      */
+    @ApiOperation("获取公司详细")
     @PreAuthorize("@ss.hasPermi('system:company:query')")
     @GetMapping(value = "/{id}")
     public AjaxResult getInfo(@PathVariable("id") Long id)
@@ -76,6 +82,7 @@ public class TCompanyController extends BaseController {
     /**
      * 新增公司
      */
+    @ApiOperation("新增公司")
     @PreAuthorize("@ss.hasPermi('system:company:add')")
     @Log(title = "公司", businessType = BusinessType.INSERT)
     @PostMapping
@@ -87,6 +94,7 @@ public class TCompanyController extends BaseController {
     /**
      * 修改公司
      */
+    @ApiOperation("修改公司")
     @PreAuthorize("@ss.hasPermi('system:company:edit')")
     @Log(title = "公司", businessType = BusinessType.UPDATE)
     @PutMapping
@@ -98,6 +106,7 @@ public class TCompanyController extends BaseController {
     /**
      * 删除公司
      */
+    @ApiOperation("删除公司")
     @PreAuthorize("@ss.hasPermi('system:company:remove')")
     @Log(title = "公司", businessType = BusinessType.DELETE)
     @DeleteMapping("/{ids}")

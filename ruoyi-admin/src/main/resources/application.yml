@@ -1,3 +1,23 @@
+spring:
+  # 资源信息
+  messages:
+    # 国际化资源文件路径
+    basename: i18n/messages
+  profiles:
+    active: dev
+  # 文件上传
+  servlet:
+    multipart:
+      # 单个文件大小
+      max-file-size:  10MB
+      # 设置总上传的文件大小
+      max-request-size:  20MB
+  # 服务模块
+  devtools:
+    restart:
+      # 热部署开关
+      enabled: true
+
 # 项目相关配置
 ruoyi:
   # 名称
@@ -36,46 +56,7 @@ logging:
     com.ruoyi: debug
     org.springframework: warn
 
-# Spring配置
-spring:
-  # 资源信息
-  messages:
-    # 国际化资源文件路径
-    basename: i18n/messages
-  profiles: 
-    active: druid
-  # 文件上传
-  servlet:
-     multipart:
-       # 单个文件大小
-       max-file-size:  10MB
-       # 设置总上传的文件大小
-       max-request-size:  20MB
-  # 服务模块
-  devtools:
-    restart:
-      # 热部署开关
-      enabled: true
-  # redis 配置
-  redis:
-    # 地址
-    host: localhost
-    # 端口，默认为6379
-    port: 6379
-    # 密码
-    password: 
-    # 连接超时时间
-    timeout: 10s
-    lettuce:
-      pool:
-        # 连接池中的最小空闲连接
-        min-idle: 0
-        # 连接池中的最大空闲连接
-        max-idle: 8
-        # 连接池的最大数据库连接数
-        max-active: 8
-        # #连接池最大阻塞等待时间（使用负值表示没有限制）
-        max-wait: -1ms
+
 
 # token配置
 token:
@@ -115,11 +96,11 @@ pagehelper:
   params: count=countSql 
 
 # Swagger配置
-swagger:
-  # 是否开启swagger
-  enabled: true
-  # 请求前缀
-  pathMapping: /dev-api
+#swagger:
+#  # 是否开启swagger
+#  enabled: true
+#  # 请求前缀
+#  pathMapping: /dev-api
 
 # 防止XSS攻击
 xss: 

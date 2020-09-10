@@ -2,6 +2,8 @@ package com.ruoyi.web.core.config;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.ruoyi.common.config.SwaggerProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -34,8 +36,11 @@ public class SwaggerConfig
     @Autowired
     private RuoYiConfig ruoyiConfig;
 
+    @Autowired
+    private SwaggerProperties swaggerProperties;
+
     /** 是否开启swagger */
-    @Value("${swagger.enabled}")
+    @Value("${swagger.enable}")
     private boolean enabled;
 
     /** 设置请求的统一前缀 */
@@ -108,7 +113,20 @@ public class SwaggerConfig
     /**
      * 添加摘要信息
      */
-    private ApiInfo apiInfo()
+    private ApiInfo apiInfo() {
+        // 用ApiInfoBuilder进行定制
+        return new ApiInfoBuilder()
+                // 设置标题
+                .title(swaggerProperties.getTitle())
+                // 描述
+                .description(swaggerProperties.getDescription())
+                // 作者信息
+                .contact(new Contact(ruoyiConfig.getName(), null, null))
+                // 版本
+                .version("版本号:" + ruoyiConfig.getVersion())
+                .build();
+    }
+    /*private ApiInfo apiInfo()
     {
         // 用ApiInfoBuilder进行定制
         return new ApiInfoBuilder()
@@ -121,5 +139,5 @@ public class SwaggerConfig
                 // 版本
                 .version("版本号:" + ruoyiConfig.getVersion())
                 .build();
-    }
+    }*/
 }

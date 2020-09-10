@@ -26,7 +26,7 @@ export default {
   },
   data() {
     return {
-      title: '振兴乡村系统',
+      title: '振兴乡村管理系统',
       logo: logoImg
     }
   }

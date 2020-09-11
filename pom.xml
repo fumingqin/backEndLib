@@ -242,7 +242,6 @@
         <module>ruoyi-quartz</module>
         <module>ruoyi-generator</module>
         <module>ruoyi-common</module>
-        <module>one-module</module>
     </modules>
     <packaging>pom</packaging>
 

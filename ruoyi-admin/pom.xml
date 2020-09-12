@@ -67,11 +67,7 @@
             <artifactId>ruoyi-quartz</artifactId>
         </dependency>
 
-        <!-- one-module-->
-        <dependency>
-            <groupId>com.ruoyi</groupId>
-            <artifactId>one-module</artifactId>
-        </dependency>
+
 
         <!-- 代码生成-->
         <dependency>
@@ -144,7 +140,7 @@
                 </executions>
             </plugin>
         </plugins>
-        <finalName>${project.artifactId}</finalName>
+<!--        <finalName>${project.artifactId}</finalName>-->
     </build>
 
 </project>

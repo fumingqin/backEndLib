@@ -42,11 +42,11 @@ public class ${ClassName}Controller extends BaseController {
     @Autowired
     private ${ClassName}Mapper ${className}Mapper;
 
-/**
- * 查询${functionName}列表
- */
-@PreAuthorize("@ss.hasPermi('${permissionPrefix}:list')")
-@GetMapping("/list")
+    /**
+     * 查询${functionName}列表
+     */
+    @PreAuthorize("@ss.hasPermi('${permissionPrefix}:list')")
+    @GetMapping("/list")
     #if($table.crud)
     public TableDataInfo list(${ClassName} ${className}) {
         startPage();

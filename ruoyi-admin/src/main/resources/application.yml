@@ -76,7 +76,7 @@ mybatis:
   # 加载全局的配置文件
   configLocation: classpath:mybatis/mybatis-config.xml
 
-# mybatis配置
+# mybatis-plus配置
 mybatis-plus:
   mapper-locations: classpath*:mapper/**/*.xml
   type-aliases-package: com.ruoyi

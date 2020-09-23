@@ -130,6 +130,6 @@ public class BaseEntity implements Serializable {
     /**
      * 删除标志
      */
-    @TableField(fill = FieldFill.INSERT_UPDATE)
-    private String delFlag;
+    @ApiModelProperty(value = "逻辑删除")
+    protected String delFlag;
 }

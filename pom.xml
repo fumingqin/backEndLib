@@ -184,11 +184,11 @@
                 <artifactId>ruoyi-common</artifactId>
                 <version>${ruoyi.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.ruoyi</groupId>
-                <artifactId>one-module</artifactId>
-                <version>${ruoyi.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.ruoyi</groupId>-->
+<!--                <artifactId>one-module</artifactId>-->
+<!--                <version>${ruoyi.version}</version>-->
+<!--            </dependency>-->
             <!--子模块 end -->
 
             <!-- lombok -->
